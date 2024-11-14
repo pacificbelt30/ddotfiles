@@ -29,12 +29,12 @@ return {
     priority = 1000,
   },
   -- 色々出来るけど，バッファ切り替え用
-  {
-    'Shougo/denite.nvim',
-    lazy = false,
-    priority = 1000,
-    build = ':UpdateRemotePlugins'
-  },
+  -- {
+  --   'Shougo/denite.nvim',
+  --   lazy = false,
+  --   priority = 1000,
+  --   build = ':UpdateRemotePlugins'
+  -- },
   -- ファイルタイプを取得する
   {
     'Shougo/context_filetype.vim',
@@ -42,10 +42,22 @@ return {
     priority = 1000,
   },
   -- コメントアウト
+  -- {
+  --   'pacificbelt30/easyCO.vim',
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
   {
-    'pacificbelt30/easyCO.vim',
-    lazy = false,
-    priority = 1000,
+    'numToStr/Comment.nvim',
+    opts = {
+      toggler = {
+          ---Line-comment toggle keymap
+          -- line = 'gcc',
+          line = '<leader>f',
+          ---Block-comment toggle keymap
+          block = 'gbc',
+      },
+    }
   },
   -- アスタリスク拡張
   {
@@ -53,18 +65,18 @@ return {
     lazy = false,
     priority = 1000,
   },
-  -- powerline的なやつ lualineへの移行も検討
+  -- powerline的なやつ lualineへの移行
   -- =======================================
-  {
-    'vim-airline/vim-airline',
-    lazy = false,
-    priority = 1000,
-  },
-  {
-    'vim-airline/vim-airline-themes',
-    lazy = false,
-    priority = 1000,
-  },
+  -- {
+  --   'vim-airline/vim-airline',
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
+  -- {
+  --   'vim-airline/vim-airline-themes',
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
   {
     'nvim-lualine/lualine.nvim',
     lazy = false,
@@ -139,6 +151,7 @@ return {
   { 'hrsh7th/cmp-nvim-lsp-signature-help', },
   { 'hrsh7th/cmp-nvim-lua', },
   { 'kdheepak/cmp-latex-symbols', },
+  { 'tzachar/cmp-ai', dependencies = 'nvim-lua/plenary.nvim'},
 
   -- snippets
   {
@@ -186,11 +199,18 @@ return {
     priority = 1000,
   },
 
-  -- easymotion or leap
+  -- easymotion or leap or hop
+  -- {
+  --   'easymotion/vim-easymotion',
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
   {
-    'easymotion/vim-easymotion',
-    lazy = false,
-    priority = 1000,
+    'smoka7/hop.nvim',
+    version = "*",
+    opts = {
+        keys = 'etovxqpdygfblzhckisuran'
+    }
   },
 
   -- document日本語化
@@ -208,11 +228,11 @@ return {
   },
 
   -- 禅モード
-  {
-    'junegunn/goyo.vim',
-    lazy = false,
-    priority = 1000,
-  },
+  -- {
+  --   'junegunn/goyo.vim',
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
 
   -- C-eでリサイズモード
   {
@@ -237,7 +257,6 @@ return {
 
   -- ファジーファインダー
   -- =======================================
-  --[[
   {
     'nvim-lua/plenary.nvim',
     lazy = false,
@@ -248,7 +267,7 @@ return {
     lazy = false,
     priority = 1000,
   },
-  ]]
+  --[[
   {
     'junegunn/fzf',
     lazy = false,
@@ -259,6 +278,7 @@ return {
     lazy = false,
     priority = 1000,
   },
+  ]]
   -- =======================================
 
   -- undo tree
@@ -286,10 +306,17 @@ return {
   },
 
   -- インデントを視覚的にわかりやすくする
+  -- {
+  --   'Yggdroot/indentLine',
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
   {
-    'Yggdroot/indentLine',
-    lazy = false,
-    priority = 1000,
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
   },
 
   -- カーソル下と同じ単語をアンダーライン or 色付け

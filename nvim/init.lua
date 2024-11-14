@@ -1,5 +1,5 @@
 vim.opt.runtimepath:append{os.getenv( "HOME" ) .. '/.config/nvim/plugins'}
-vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/rc/plug.rc.vim')
+-- vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/rc/plug.rc.vim')
 print('init.lua')
 -- 文字コードをUTF-8に設定
 vim.opt.fenc = 'utf-8'
@@ -290,16 +290,29 @@ require("scrollbar").setup()
 require('luaoptions')
 -- ~/.config/nvim/plugins/lua/nvim-cmp.lua
 require('nvim-cmp')
+-- ~/.config/nvim/plugins/lua/tree-sitter.lua
+require('tree-sitter')
+-- ~/.config/nvim/plugins/lua/hop-easymotion.lua
+require('hop-easymotion')
+-- ~/.config/nvim/plugins/lua/comment-nvim.lua
+require('comment-nvim')
+-- ~/.config/nvim/plugins/lua/lualine-confing.lua
+require('lualine-config')
 
-vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/airline.rc.vim')
+-- vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/airline.rc.vim')
 vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/tagbar.rc.vim')
-vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/denite.rc.vim')
-vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/easymotion.rc.vim')
-vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/tree-sitter.rc.vim')
+-- vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/denite.rc.vim')
+-- vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/easymotion.rc.vim')
+-- vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/tree-sitter.rc.vim')
 vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/fzf.rc.vim')
 vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/lexima.rc.vim')
-vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/indentLine.rc.vim')
+-- vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/indentLine.rc.vim')
 vim.cmd('source ' .. os.getenv( "HOME" ) .. '/.config/nvim/plugins/toggleterm.rc.vim')
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 vim.keymap.set({'n','v'},'H','<cmd>call smoothie#do("<C-u>") <CR>', {noremap = true, unique=true})
 vim.keymap.set({'n','v'},'L','<cmd>call smoothie#do("<C-d>") <CR>', {noremap = true, unique=true})
