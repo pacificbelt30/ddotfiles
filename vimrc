@@ -82,7 +82,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 "leaderキーはスペースキー(便利)
 "キーバインドコーナー
 let mapleader = "\<Space>"
-inoremap <silent> jj <ESC>
+inoremap <silent> jk <ESC>
 "inoremap <silent> jk <ESC>
 nnoremap <silent> p p`]
 nnoremap <leader>w :w <CR>

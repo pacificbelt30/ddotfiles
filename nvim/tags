@@ -1,0 +1,148 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+$FZF_DEFAULT_OPTS	plugins/fzf.rc.vim	/^let $FZF_DEFAULT_OPTS="--layout=reverse"$/;"	v
+*	plugins/fzf.rc.vim	/^map * <nop>$/;"	m
+*	plugins/fzf.rc.vim	/^nmap * :call AsteriskGrep()<CR>$/;"	m
+,	rc/keymappings.rc.vim	/^onoremap , i<$/;"	m
+.event:on(	plugins/lexima.rc.vim	/^cmp.event:on($/;"	m
+/	plugins/fzf.rc.vim	/^nmap \/ :BLines<CR>$/;"	m
+2	rc/keymappings.rc.vim	/^onoremap 2 i"$/;"	m
+7	rc/keymappings.rc.vim	/^onoremap 7 i'$/;"	m
+8	rc/keymappings.rc.vim	/^onoremap 8 i($/;"	m
+;	rc/keymappings.rc.vim	/^nnoremap ; :$/;"	m
+<C-b>	rc/keymappings.rc.vim	/^nnoremap <C-b> <C-o>$/;"	m
+<C-f>	rc/keymappings.rc.vim	/^nnoremap <C-f> <C-i>$/;"	m
+<C-j>	plugins/coc.rc.vim	/^vmap <C-j> <Plug>(coc-snippets-select)$/;"	m
+<C-j>	rc/keymappings.rc.vim	/^nnoremap <silent> <C-j> :bprev<CR>$/;"	m
+<C-k>	plugins/neosnippet.rc.vim	/^imap <C-k> <Plug>(neosnippet_expand_or_jump)$/;"	m
+<C-k>	rc/keymappings.rc.vim	/^nnoremap <silent> <C-k> :bnext<CR>$/;"	m
+<C-p>	rc/keymappings.rc.vim	/^nmap <C-p> <Nop>$/;"	m
+<C-p>	rc/keymappings.rc.vim	/^nnoremap <C-p> :cd:%:h "バッファまるごと開いてるファイルのディレクトリへ$/;"	m
+<CR>	rc/keymappings.rc.vim	/^nmap <CR> <Nop>$/;"	m
+<CR>	rc/keymappings.rc.vim	/^nnoremap <CR> za$/;"	m
+<Esc><Esc>	rc/keymappings.rc.vim	/^nmap <Esc><Esc> :nohlsearch<CR><Esc>$/;"	m
+<F12>	plugins/tagbar.rc.vim	/^nnoremap <F12> :Vista!!<CR>$/;"	m
+<S-TAB>	plugins/coc.rc.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
+<Space><Space>	rc/keymappings.rc.vim	/^cnoremap <Space><Space> <C-u>$/;"	m
+<Space>d	plugins/denite.rc.vim	/^  nnoremap <silent><Space>d :Denite file\/rec<CR>$/;"	m
+<Space>g	plugins/denite.rc.vim	/^  nnoremap <silent><Space>g :Denite grep<CR>$/;"	m
+<Space>mt	plugins/coc.rc.vim	/^nmap <silent> <Space>mt <Plug>(coc-format)$/;"	m
+<TAB>	plugins/coc.rc.vim	/^inoremap <silent><expr> <TAB>$/;"	m
+<Tab><Tab>	rc/keymappings.rc.vim	/^nnoremap <Tab><Tab> q:$/;"	m
+<c-space>	plugins/coc.rc.vim	/^inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
+<c-t>	plugins/toggleterm.rc.vim	/^inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>$/;"	m
+<c-t>	plugins/toggleterm.rc.vim	/^nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>$/;"	m
+<cr>	plugins/coc.rc.vim	/^inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()$/;"	m
+<leader><CR>	rc/keymappings.rc.vim	/^nnoremap <leader><CR> :only<CR>$/;"	m
+<leader>H	rc/keymappings.rc.vim	/^nnoremap <leader>H :sp<CR>$/;"	m
+<leader>V	rc/keymappings.rc.vim	/^nnoremap <leader>V :vs<CR>$/;"	m
+<leader>b	plugins/fzf.rc.vim	/^nnoremap <leader>b :Buffers<CR>$/;"	m
+<leader>e	plugins/fzf.rc.vim	/^nnoremap <leader>e :CocFzfList diagnostics<CR>$/;"	m
+<leader>e	rc/keymappings.rc.vim	/^nnoremap <leader>e :e  $/;"	m
+<leader>j	plugins/easymotion.rc.vim	/^map <leader>j <Plug>(easymotion-bd-jk)$/;"	m
+<leader>j	plugins/easymotion.rc.vim	/^nmap <leader>j <Plug>(easymotion-overwin-line)$/;"	m
+<leader>n	plugins/fzf.rc.vim	/^  nnoremap <leader>n :GitProjectFiles<CR>$/;"	m
+<leader>n	plugins/fzf.rc.vim	/^  nnoremap <leader>n :ProjectFiles<CR>$/;"	m
+<leader>q	rc/keymappings.rc.vim	/^nnoremap <leader>q :q<CR>$/;"	m
+<leader>r	plugins/easymotion.rc.vim	/^map  <leader>r <Plug>(easymotion-bd-f)$/;"	m
+<leader>r	plugins/easymotion.rc.vim	/^nmap <leader>r <Plug>(easymotion-overwin-f)$/;"	m
+<leader>s	plugins/easymotion.rc.vim	/^map <leader>s <Plug>(easymotion-bd-f)$/;"	m
+<leader>s	plugins/easymotion.rc.vim	/^map <leader>s <Plug>(easymotion-bd-f2)$/;"	m
+<leader>s	plugins/easymotion.rc.vim	/^nmap <leader>s <Plug>(easymotion-overwin-f)$/;"	m
+<leader>s	plugins/easymotion.rc.vim	/^nmap <leader>s <Plug>(easymotion-overwin-f2)$/;"	m
+<leader>t	rc/keymappings.rc.vim	/^nnoremap <leader>t :tabnew <CR>$/;"	m
+<leader>w	rc/keymappings.rc.vim	/^nnoremap <leader>w :w <CR>$/;"	m
+@	rc/keymappings.rc.vim	/^onoremap @ i`$/;"	m
+AsteriskGrep	plugins/fzf.rc.vim	/^function! AsteriskGrep()$/;"	f
+BLines	plugins/fzf.rc.vim	/^command! -bang -nargs=* BLines$/;"	c
+COC	plugins/coc.rc.vim	/^augroup COC$/;"	a
+F	plugins/easymotion.rc.vim	/^map F <Plug>(easymotion-overwin-f2)$/;"	m
+Files	plugins/fzf.rc.vim	/^command! -bang -nargs=? -complete=dir Files$/;"	c
+GFiles	plugins/fzf.rc.vim	/^command! -bang -nargs=? -complete=dir GFiles$/;"	c
+GitProjectFiles	plugins/fzf.rc.vim	/^command! GitProjectFiles execute 'GFiles -oc --exclude-standard' s:find_git_root()$/;"	c
+H	rc/keymappings.rc.vim	/^nmap H <C-u>$/;"	m
+L	rc/keymappings.rc.vim	/^nmap L <C-d>$/;"	m
+OC	rc/options.rc.vim	/^command! OC call OpenConf()$/;"	c
+OpenConf	init.lua	/^function OpenConf()$/;"	f
+OpenConf	rc/options.rc.vim	/^function! OpenConf()$/;"	f
+ProjectFiles	plugins/fzf.rc.vim	/^command! ProjectFiles execute 'Files' s:find_git_root()$/;"	c
+Rg	plugins/fzf.rc.vim	/^command! -bang -nargs=* Rg$/;"	c
+SelectUnderWord	plugins/fzf.rc.vim	/^function! SelectUnderWord()$/;"	f
+TransparentBG	rc/options.rc.vim	/^augroup TransparentBG$/;"	a
+[	rc/keymappings.rc.vim	/^onoremap [ i[$/;"	m
+["<S-Tab>"] 	plugins/lua/nvim-cmp.lua	/^    ["<S-Tab>"] = cmp.mapping(function(fallback)$/;"	f
+["<Tab>"] 	plugins/lua/nvim-cmp.lua	/^    ["<Tab>"] = cmp.mapping(function(fallback)$/;"	f
+\	plugins/fzf.rc.vim	/^nmap \\ :Rg<CR>$/;"	m
+_autopairs.on_confirm_done()	plugins/lexima.rc.vim	/^  cmp_autopairs.on_confirm_done()$/;"	m
+_bs	plugins/lexima.rc.vim	/^  map_bs = true,  -- map the <BS> key$/;"	m
+_c_h	plugins/lexima.rc.vim	/^  map_c_h = false,  -- Map the <C-h> key to delete a pair$/;"	m
+_c_w	plugins/lexima.rc.vim	/^  map_c_w = false, -- map <c-w> to delete a pair if possible$/;"	m
+_cr	plugins/lexima.rc.vim	/^  map_cr = true,$/;"	m
+_fzf_	plugins/fzf.rc.vim	/^augroup _fzf_$/;"	a
+ac	plugins/coc.rc.vim	/^omap ac <Plug>(coc-classobj-a)$/;"	m
+af	plugins/coc.rc.vim	/^omap af <Plug>(coc-funcobj-a)$/;"	m
+callback 	init.lua	/^  callback = function()$/;"	f
+check_back_space	plugins/coc.rc.vim	/^function! s:check_back_space() abort$/;"	f
+config 	plugins/lua/plugins.lua	/^    config = function()$/;"	f
+denite_my_settings	plugins/denite.rc.vim	/^function! s:denite_my_settings() abort$/;"	f
+expand 	plugins/lua/nvim-cmp.lua	/^    expand = function(args)$/;"	f
+f	plugins/easymotion.rc.vim	/^map f <Plug>(easymotion-lineanywhere)$/;"	m
+find_git_root	plugins/fzf.rc.vim	/^function! s:find_git_root()$/;"	f
+g:EasyMotion_do_mapping	plugins/easymotion.rc.vim	/^let g:EasyMotion_do_mapping = 0$/;"	v
+g:EasyMotion_skipfoldedline	plugins/easymotion.rc.vim	/^let g:EasyMotion_skipfoldedline = 0$/;"	v
+g:EasyMotion_smartcase	plugins/easymotion.rc.vim	/^let g:EasyMotion_smartcase = 1$/;"	v
+g:airline#extensions#tabline#enabled	plugins/airline.rc.vim	/^let g:airline#extensions#tabline#enabled = 0$/;"	v
+g:airline#extensions#tabline#formatter	plugins/airline.rc.vim	/^let g:airline#extensions#tabline#formatter = 'default'$/;"	v
+g:airline#extensions#tabline#left_alt_sep	plugins/airline.rc.vim	/^let g:airline#extensions#tabline#left_alt_sep = '|'$/;"	v
+g:airline#extensions#tabline#left_sep	plugins/airline.rc.vim	/^let g:airline#extensions#tabline#left_sep = ' '$/;"	v
+g:airline_powerline_fonts	plugins/airline.rc.vim	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_theme	plugins/airline.rc.vim	/^let g:airline_theme = 'deus'$/;"	v
+g:airline_theme	plugins/airline.rc.vim	/^let g:airline_theme = 'wombat'$/;"	v
+g:coc_global_extensions	plugins/coc.rc.vim	/^let g:coc_global_extensions = ['coc-texlab', 'coc-snippets', 'coc-explorer', 'coc-lists']$/;"	v
+g:coc_snippet_next	plugins/coc.rc.vim	/^let g:coc_snippet_next = '<C-k>'$/;"	v
+g:coc_snippet_prev	plugins/coc.rc.vim	/^let g:coc_snippet_prev = '<C-j>'$/;"	v
+g:indentLine_char	plugins/indentLine.rc.vim	/^let g:indentLine_char = '¦'$/;"	v
+g:indentLine_color_dark	plugins/indentLine.rc.vim	/^let g:indentLine_color_dark = 1 " (default: 2)$/;"	v
+g:indentLine_defaultGroup	plugins/indentLine.rc.vim	/^let g:indentLine_defaultGroup = 'SpecialKey' " tab文字と同じ色$/;"	v
+g:indentLine_enabled	plugins/indentLine.rc.vim	/^let g:indentLine_enabled = 1$/;"	v
+g:neosnippet#snippets_directory	plugins/neosnippet.rc.vim	/^let g:neosnippet#snippets_directory = '~\/.config\/nvim\/snippets'$/;"	v
+g:racer_cmd	plugins/vim-racer.rc.vim	/^let g:racer_cmd = 'racer'$/;"	v
+g:racer_experimental_completer	plugins/vim-racer.rc.vim	/^let g:racer_experimental_completer = 1$/;"	v
+g:rainbow#max_level	plugins/rainbow_parentheses.rc.vim	/^let g:rainbow#max_level = 16$/;"	v
+g:rainbow#pairs	plugins/rainbow_parentheses.rc.vim	/^let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{','}']]$/;"	v
+g:tex_flavor	rc/options.rc.vim	/^let g:tex_flavor = 'latex' " 全.texファイルをlatexファイルとして認識させる$/;"	v
+g:vista#renderer#enable_icon	plugins/tagbar.rc.vim	/^let g:vista#renderer#enable_icon = 1$/;"	v
+g:vista#renderer#icons	plugins/tagbar.rc.vim	/^let g:vista#renderer#icons = {$/;"	v
+g:vista_default_executive	plugins/tagbar.rc.vim	/^let g:vista_default_executive = 'ctags'$/;"	v
+g:vista_executive_for	plugins/tagbar.rc.vim	/^let g:vista_executive_for = {$/;"	v
+g:vista_fzf_preview	plugins/tagbar.rc.vim	/^let g:vista_fzf_preview = ['right:50%']$/;"	v
+g:vista_icon_indent	plugins/tagbar.rc.vim	/^let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]$/;"	v
+gd	plugins/coc.rc.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
+gi	plugins/coc.rc.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
+gr	plugins/coc.rc.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
+gy	plugins/coc.rc.vim	/^nmap <silent> gy <Plug>(coc-type-definition)$/;"	m
+ic	plugins/coc.rc.vim	/^omap ic <Plug>(coc-classobj-i)$/;"	m
+if	plugins/coc.rc.vim	/^omap if <Plug>(coc-funcobj-i)$/;"	m
+j	rc/keymappings.rc.vim	/^nnoremap j gj$/;"	m
+j	rc/keymappings.rc.vim	/^vnoremap j gj$/;"	m
+jk	rc/keymappings.rc.vim	/^inoremap <silent> jk <C-\\><C-n>$/;"	m
+k	rc/keymappings.rc.vim	/^nnoremap k gk$/;"	m
+k	rc/keymappings.rc.vim	/^vnoremap k gk$/;"	m
+local has_words_before 	plugins/lua/nvim-cmp.lua	/^local has_words_before = function()$/;"	f
+mapleader	rc/keymappings.rc.vim	/^let mapleader = "\\<Space>"$/;"	v
+myDenite	plugins/denite.rc.vim	/^augroup myDenite$/;"	a
+p	rc/keymappings.rc.vim	/^nnoremap <silent> p p`]$/;"	m
+rainbowparentheses	plugins/rainbow_parentheses.rc.vim	/^augroup rainbowparentheses$/;"	a
+s:denite_default_options	plugins/denite.rc.vim	/^let s:denite_default_options = {$/;"	v
+s:denite_option_array	plugins/denite.rc.vim	/^let s:denite_option_array = []$/;"	v
+s:denite_win_height_percent	plugins/denite.rc.vim	/^let s:denite_win_height_percent = 0.5$/;"	v
+s:denite_win_width_percent	plugins/denite.rc.vim	/^let s:denite_win_width_percent = 0.7$/;"	v
+timeout	rc/keymappings.rc.vim	/^augroup timeout$/;"	a
+v	rc/keymappings.rc.vim	/^vnoremap v iw$/;"	m
+vista	plugins/tagbar.rc.vim	/^augroup vista$/;"	a
+w	rc/keymappings.rc.vim	/^nnoremap w :wincmd w<CR>$/;"	m
+{	rc/keymappings.rc.vim	/^onoremap { i{$/;"	m

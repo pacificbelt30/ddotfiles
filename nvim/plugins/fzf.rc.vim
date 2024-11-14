@@ -74,6 +74,6 @@ augroup _fzf_
   autocmd FileType fzf set winblend=15
   autocmd FileType fzf nnoremap <buffer> q :q<CR> 
   autocmd FileType fzf tnoremap <buffer> <Esc> <C-\><C-n>:q<CR>
-  autocmd FileType fzf tnoremap <buffer> jj <C-\><C-n>:q<CR>
+  autocmd FileType fzf tnoremap <buffer> jk <C-\><C-n>:q<CR>
   autocmd FileType fzf tnoremap <buffer> <Space><Space> <C-u>
 augroup END

@@ -84,7 +84,8 @@ set background=dark
 "colorscheme onedark
 "colorscheme badwolf
 "colorscheme molokai
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme tokyomotion-storm
 set t_Co=256
 set termguicolors
 " コマンドラインの高さが0になる

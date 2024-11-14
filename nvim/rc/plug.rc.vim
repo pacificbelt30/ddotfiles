@@ -14,8 +14,8 @@ Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 " ファイルタイプを
 Plug 'Shougo/context_filetype.vim'
 " コメントアウト
-"Plug 'pacificbelt30/easyCO.vim'
-Plug '~/work/easyCO.vim'
+Plug 'pacificbelt30/easyCO.vim'
+"Plug '~/work/easyCO.vim'
 " アスタリスク拡張
 Plug '~/work/exasterisk.vim'
 " タグ生成 F12
@@ -118,6 +118,10 @@ Plug 'lambdalisue/readablefold.vim'
 Plug 'rcarriga/nvim-notify'
 " floting term
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
+" noice
+Plug 'folke/noice.nvim'
+" Plug 'MunifTanjim/nui.nvim'
+Plug 'VonHeikemen/fine-cmdline.nvim'
 
 " テーマ
 " ================================
@@ -125,7 +129,6 @@ Plug 'morhetz/gruvbox',{'do': 'cp colors/* ~/.config/nvim/colors/'}
 Plug 'EdenEast/nightfox.nvim',{'do': 'cp colors/* ~/.config/nvim/colors/'}
 Plug 'joshdick/onedark.vim',{'do': 'cp colors/* ~/.config/nvim/colors/'}
 Plug 'NLKNguyen/papercolor-theme',{'do': 'cp colors/* ~/.config/nvim/colors/'}
-Plug 'sainnhe/gruvbox-material',{'do': 'cp colors/* ~/.config/nvim/colors/'}
 
 Plug 'jacoborus/tender.vim',{'do': 'cp colors/* ~/.config/nvim/colors/'}
 Plug 'nanotech/jellybeans.vim',{'do': 'cp colors/* ~/.config/nvim/colors/'}
