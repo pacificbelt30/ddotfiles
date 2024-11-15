@@ -50,7 +50,7 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp_signature_help' },
-    { name = 'cmp_ai' },
+    -- { name = 'cmp_ai' },
     { name = "latex_symbols" },
     { name = 'nvim_lua' },
     { name = 'nvim_lsp' },
@@ -127,25 +127,25 @@ require('lspconfig')['tsserver'].setup {
   capabilities = capabilities
 }
 
-local cmp_ai = require('cmp_ai.config')
-cmp_ai:setup({
-  max_lines = 100,
-  provider = 'Ollama',
-  provider_options = {
-    model = 'qwen2.5-coder:3b',
-    prompt = function(lines_before, lines_after)
-      return lines_before
-    end,
-    suffix = function(lines_after)
-      return lines_after
-    end,
-  },
-  notify = true,
-  notify_callback = function(msg)
-    vim.notify(msg)
-  end,
-  run_on_every_keystroke = true,
-})
+-- local cmp_ai = require('cmp_ai.config')
+-- cmp_ai:setup({
+--   max_lines = 100,
+--   provider = 'Ollama',
+--   provider_options = {
+--     model = 'qwen2.5-coder:3b',
+--     prompt = function(lines_before, lines_after)
+--       return lines_before
+--     end,
+--     suffix = function(lines_after)
+--       return lines_after
+--     end,
+--   },
+--   notify = true,
+--   notify_callback = function(msg)
+--     vim.notify(msg)
+--   end,
+--   run_on_every_keystroke = true,
+-- })
 
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')

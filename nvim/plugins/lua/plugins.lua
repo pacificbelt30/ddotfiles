@@ -257,6 +257,7 @@ return {
 
   -- ファジーファインダー
   -- =======================================
+  --[[
   {
     'nvim-lua/plenary.nvim',
     lazy = false,
@@ -267,7 +268,7 @@ return {
     lazy = false,
     priority = 1000,
   },
-  --[[
+  ]]
   {
     'junegunn/fzf',
     lazy = false,
@@ -278,7 +279,6 @@ return {
     lazy = false,
     priority = 1000,
   },
-  ]]
   -- =======================================
 
   -- undo tree
@@ -337,7 +337,28 @@ return {
     lazy = false,
     priority = 1000,
   },
-
+  -- 通知
+  {
+    'MunifTanjim/nui.nvim',
+    lazy = false,
+    priority = 1000,
+  },
+  -- lazy.nvim
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+      }
+  },
   -- toggle出来る端末をはやせる
   {
     'akinsho/toggleterm.nvim',
