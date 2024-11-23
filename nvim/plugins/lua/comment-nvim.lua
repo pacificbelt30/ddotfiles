@@ -1,4 +1,4 @@
-local confing = {
+local config = {
     ---Add a space b/w comment and the line
     padding = true,
     ---Whether the cursor should stay at its position
@@ -9,14 +9,14 @@ local confing = {
     toggler = {
         ---Line-comment toggle keymap
         -- line = 'gcc',
-        line = 'gbc',
+        line = '<leader>f',
         ---Block-comment toggle keymap
-        block = 'gcc',
+        block = 'gbc',
     },
     ---LHS of operator-pending mappings in NORMAL and VISUAL mode
     opleader = {
         ---Line-comment keymap
-        line = 'gc',
+        line = '<leader>f',
         ---Block-comment keymap
         block = 'gb',
     },

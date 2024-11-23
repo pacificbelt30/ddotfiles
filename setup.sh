@@ -1,13 +1,6 @@
 #!/bin/zsh
 # vim,i3その他諸々の設定を配置するシェルスクリプト
-
-#Plugインストール
-#cd ~/dotfiles
 #chsh -s $(which zsh)
-echo "vim-plugのインストール"
-echo "Install vim-plug"
-zsh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 #make directry
 echo "設定ファイルを配置するディレクトリを作成"
@@ -46,9 +39,7 @@ echo "End pasting the link to the configuration file (under $HOME)."
 #$HOME/.config 以下の設定ファイル
 echo "リンク貼り付け開始($HOME/.config/以下)"
 echo "Start pasting the link to the configuration file (under $HOME/.config/)."
-ln -snf `pwd`/nvim/init.vim $HOME/.config/nvim/init.vim
-#ln -snf `pwd`/nvim/colors/gruvbox.vim $HOME/.config/nvim/colors/gruvbox.vim
-#ln -snf `pwd`/nvim/colors $HOME/.config/nvim/colors
+ln -snf `pwd`/nvim/init.lua $HOME/.config/nvim/init.lua
 ln -snf `pwd`/nvim/plugins $HOME/.config/nvim/plugins
 ln -snf `pwd`/nvim/snippets $HOME/.config/nvim/snippets
 ln -snf `pwd`/nvim/ftplugin $HOME/.config/nvim/ftplugin

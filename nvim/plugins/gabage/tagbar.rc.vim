@@ -14,8 +14,10 @@ let g:vista#renderer#icons = {
 \   "function": "\uf794",
 \   "variable": "\uf71b",
 \  }
-nnoremap <F12> :Vista!!<CR>
+" nnoremap <F12> :Vista!!<CR>
 augroup vista
   autocmd!
   "autocmd VimEnter * Vista
 augroup END
+
+nnoremap <F12> :SymbolsOutline<CR>

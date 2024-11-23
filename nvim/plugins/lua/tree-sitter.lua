@@ -2,13 +2,15 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
     disable = {
-      'lua',
       'ruby',
       'toml',
       'c_sharp',
       'vue',
     }
   },
+  -- ensure_installed = 'maintained',
+  ensure_installed = {'lua', 'c', 'cpp', 'python', 'rust', 'go', 'javascript'},
+  -- indent = { enable = true },
   rainbow = {
     enable = true,
     -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for

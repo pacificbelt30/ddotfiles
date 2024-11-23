@@ -14,3 +14,4 @@ prezto/runcoms/zpreztorc
 prezto/runcoms/zprofile
 prezto/runcoms/zshenv
 
+.env

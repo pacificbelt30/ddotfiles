@@ -49,15 +49,18 @@ return {
   -- },
   {
     'numToStr/Comment.nvim',
-    opts = {
-      toggler = {
-          ---Line-comment toggle keymap
-          -- line = 'gcc',
-          line = '<leader>f',
-          ---Block-comment toggle keymap
-          block = 'gbc',
-      },
-    }
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
   },
   -- アスタリスク拡張
   {
@@ -109,6 +112,12 @@ return {
     lazy = false,
     priority = 1000,
   },
+  -- Diff の表示
+  {
+    'sindrets/diffview.nvim',
+    lazy = false,
+    priority = 1000,
+  },
   -- =======================================
 
   -- lsp
@@ -152,6 +161,7 @@ return {
   { 'hrsh7th/cmp-nvim-lua', },
   { 'kdheepak/cmp-latex-symbols', },
   { 'tzachar/cmp-ai', dependencies = 'nvim-lua/plenary.nvim'},
+  { 'milanglacier/minuet-ai.nvim', dependencies = 'nvim-lua/plenary.nvim'},
 
   -- snippets
   {
@@ -248,7 +258,7 @@ return {
     priority = 1000,
   },
 
-  -- sunippets
+  -- snippets
   {
     'honza/vim-snippets',
     lazy = false,
@@ -279,6 +289,17 @@ return {
     lazy = false,
     priority = 1000,
   },
+  --[[ {
+    "ibhagwan/fzf-lua",
+    lazy = true,
+    priority = 1000,
+    -- optional for icon support
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      -- calling `setup` is optional for customization
+      require("fzf-lua").setup({})
+    end
+  }, ]]
   -- =======================================
 
   -- undo tree
@@ -348,7 +369,6 @@ return {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
-      -- add any options here
     },
     dependencies = {
       -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
@@ -368,12 +388,21 @@ return {
 
   -- colorscheme
   {
-    "folke/tokyonight.nvim",
+    'folke/tokyonight.nvim',
     lazy = false,
     priority = 1000,
     opts = {},
     config = function()
-      vim.cmd([[colorscheme tokyonight]])
+      -- vim.cmd([[colorscheme tokyonight-storm]])
+    end
+  },
+  {
+    'rebelot/kanagawa.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      vim.cmd([[colorscheme kanagawa-wave]])
     end
   },
 }
