@@ -49,20 +49,19 @@ cmp.setup({
     ['<C-e>'] = cmp.mapping.abort(),
     -- ['<CR>'] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    ["<A-y>"] = require('minuet').make_cmp_map(),
+    -- ["<A-y>"] = require('minuet').make_cmp_map(),
+    -- ["<A-y>"] = require('copilot_cmp').make_cmp_map(),
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp_signature_help' },
     -- { name = 'cmp_ai' },
     -- { name = 'minuet' },
+    { name = "copilot", group_index = 2 },
     { name = "latex_symbols" },
     { name = 'nvim_lua' },
     { name = 'nvim_lsp' },
     { name = 'path' },
-    -- { name = 'vsnip' }, -- For vsnip users.
-    -- { name = 'luasnip' }, -- For luasnip users.
     { name = 'ultisnips' }, -- For ultisnips users.
-    -- { name = 'snippy' }, -- For snippy users.
   }, {
     { name = 'buffer' },
   }),
@@ -71,12 +70,30 @@ cmp.setup({
       local source_names = {
         nvim_lsp = "[LSP]",
         cmp_ai = "[AI]",
+        copilot = "[Copilot]",
         luasnip = "[Snippet]",
       }
       vim_item.menu = source_names[entry.source.name]
       return vim_item
     end,
-  }
+  },
+  sorting = {
+    priority_weight = 2.0,
+    comparators = {
+      cmp.config.compare.locality,
+      cmp.config.compare.recently_used,
+      require("copilot_cmp.comparators").prioritize,
+      cmp.config.compare.score,
+      -- Below is the default comparitor list and order for nvim-cmp
+      cmp.config.compare.offset,
+      -- cmp.config.compare.scopes, --this is commented in nvim-cmp too
+      cmp.config.compare.exact,
+      cmp.config.compare.kind,
+      cmp.config.compare.sort_text,
+      cmp.config.compare.length,
+      cmp.config.compare.order,
+    },
+  },
 })
 
 -- Set configuration for specific filetype.
@@ -117,7 +134,14 @@ require("mason-lspconfig").setup({
 -- lsp setting
 require('lspconfig')['pyright'].setup {
   capabilities = capabilities,
+  venvPath = vim.fn.getcwd() .. '/.venv',
   on_new_config = function(config, root_dir)
+    local venv_path = vim.fn.getcwd() .. '/.venv'
+    print(venv_path)
+    if vim.fn.isdirectory(venv_path) == 1 then
+      vim.env.PATH = venv_path .. '/bin:' .. vim.env.path
+      vim.env.VIRTUAL_ENV = venv_path
+    end
     if vim.fn.executable('poetry') then
       local env = vim.trim(vim.fn.system('cd "' .. root_dir .. '"; poetry env info -p 2>/dev/null'))
       if string.len(env) > 0 then
@@ -179,14 +203,20 @@ local cmp_ai = require('cmp_ai.config')
 --   run_on_every_keystroke = true,
 -- })
 
+require("copilot").setup({
+  suggestion = { enabled = false },
+  panel = { enabled = false },
+})
+
 require('minuet').setup {
-  -- provider = 'openai',
-  provider = 'gemini',
+  provider = 'openai',
+  -- provider = 'gemini',
   -- provider = 'openai_compatible',
   -- provider = 'openai_fim_compatible',
   provider_options = {
       gemini = {
-          model = 'gemini-1.5-flash-002',
+          -- model = 'gemini-1.5-flash-002',
+          model = 'gemini-2.0-flash-exp',
           system = default_system,
           few_shots = default_few_shots,
           stream = true,

@@ -162,6 +162,12 @@ return {
   { 'kdheepak/cmp-latex-symbols', },
   { 'tzachar/cmp-ai', dependencies = 'nvim-lua/plenary.nvim'},
   { 'milanglacier/minuet-ai.nvim', dependencies = 'nvim-lua/plenary.nvim'},
+  { 'zbirenbaum/copilot.lua' },
+  { "zbirenbaum/copilot-cmp",
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  },
 
   -- snippets
   {

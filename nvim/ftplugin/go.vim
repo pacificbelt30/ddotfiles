@@ -3,7 +3,7 @@ setlocal shiftwidth=4
 setlocal noexpandtab
 
 function! s:golang_fmt()
-  exec ":!go fmt"
+  exec ":!go fmt " . expand("%")
 endfunction
 
 if executable('go')
